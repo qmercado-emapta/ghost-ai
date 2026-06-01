@@ -6,6 +6,9 @@ import { PanelLeftClose, PanelLeftOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
+/**
+ * Props for the fixed editor navigation bar.
+ */
 interface EditorNavbarProps {
   isSidebarOpen: boolean
   onToggleSidebar: () => void
@@ -13,6 +16,10 @@ interface EditorNavbarProps {
   className?: string
 }
 
+/**
+ * Renders the editor top bar with a sidebar toggle, centered content slot,
+ * and reserved right-side action area.
+ */
 function EditorNavbar({
   isSidebarOpen,
   onToggleSidebar,

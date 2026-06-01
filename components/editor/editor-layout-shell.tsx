@@ -5,10 +5,17 @@ import { useState, type ReactNode } from "react"
 import { EditorNavbar } from "@/components/editor/editor-navbar"
 import { ProjectSidebar } from "@/components/editor/project-sidebar"
 
+/**
+ * Props for the stateful shell that frames editor route content.
+ */
 interface EditorLayoutShellProps {
   children: ReactNode
 }
 
+/**
+ * Provides the shared editor chrome and owns project sidebar visibility for
+ * nested editor routes.
+ */
 function EditorLayoutShell({ children }: EditorLayoutShellProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
 

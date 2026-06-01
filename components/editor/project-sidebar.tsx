@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 
+/**
+ * Props for the floating project sidebar shell.
+ */
 interface ProjectSidebarProps {
   isOpen: boolean
   onClose: () => void
@@ -13,6 +16,9 @@ interface ProjectSidebarProps {
   className?: string
 }
 
+/**
+ * Displays a compact placeholder for project lists that do not have content yet.
+ */
 function EmptyProjectState({ label }: { label: string }) {
   return (
     <div className="flex min-h-48 items-center justify-center rounded-2xl border border-dashed border-subtle-border bg-subtle/40 px-6 text-center text-sm text-copy-muted">
@@ -21,6 +27,9 @@ function EmptyProjectState({ label }: { label: string }) {
   )
 }
 
+/**
+ * Renders the slide-in project sidebar with tabs for owned and shared projects.
+ */
 function ProjectSidebar({
   isOpen,
   onClose,

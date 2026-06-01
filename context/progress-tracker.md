@@ -8,13 +8,14 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Goal
 
-- Editor chrome components wired into an editor route layout.
+- Review warnings resolved for editor chrome PR.
 
 ## Completed
 
 - Design system and UI primitive setup.
 - Editor navbar and project sidebar shell from `context/feature-specs/02-editor-chrome.md`.
 - Editor route layout shell using `EditorNavbar` and `ProjectSidebar`.
+- Review warning fixes for editor chrome documentation coverage and PR metadata.
 
 ## In Progress
 
@@ -43,3 +44,5 @@ Update this file whenever the current phase, active feature, or implementation s
 - Verified editor chrome with `npm run lint` and `npx tsc --noEmit`.
 - Started wiring editor chrome into an editor route layout.
 - Added `EditorLayoutShell` and `app/editor/layout.tsx` so editor routes render with the navbar and floating project sidebar. Verified with `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
+- Started resolving review warnings for PR title and docstring coverage.
+- Added documentation comments for editor chrome components and layout functions. Verified with `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
