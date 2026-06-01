@@ -8,11 +8,14 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Goal
 
-- Design system foundation implemented from `context/feature-specs/01-design-system.md`.
+- Review warnings addressed for editor chrome PR.
 
 ## Completed
 
 - Design system and UI primitive setup.
+- Editor navbar and project sidebar shell from `context/feature-specs/02-editor-chrome.md`.
+- Editor route layout shell using `EditorNavbar` and `ProjectSidebar`.
+- Review warning fix for editor chrome documentation coverage.
 
 ## In Progress
 
@@ -20,11 +23,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Start the next feature unit from `context/feature-specs/`.
+- Start project dialogs from `context/feature-specs/04-project-dialogs.md`.
 
 ## Open Questions
 
-- None currently.
+- PR title still needs to be updated in GitHub because this environment has no `gh` CLI or GitHub API token.
 
 ## Architecture Decisions
 
@@ -36,3 +39,11 @@ Update this file whenever the current phase, active feature, or implementation s
 - Started design-system implementation: shadcn/ui primitives, lucide-react, `cn()` helper, and dark theme tokens.
 - Installed shadcn/ui with Button, Card, Dialog, Input, Tabs, Textarea, and ScrollArea primitives. Added dark-only theme tokens in `app/globals.css`.
 - Verified with `npm run lint`, `npx tsc --noEmit`, a direct `cn()` merge check, and `npm run build`.
+- Started editor chrome implementation from `context/feature-specs/02-editor-chrome.md`.
+- Added `EditorNavbar` and `ProjectSidebar` chrome components. Confirmed the existing shadcn dialog primitives already provide title, description, and footer slots for the future dialog pattern.
+- Verified editor chrome with `npm run lint` and `npx tsc --noEmit`.
+- Started wiring editor chrome into an editor route layout.
+- Added `EditorLayoutShell` and `app/editor/layout.tsx` so editor routes render with the navbar and floating project sidebar. Verified with `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
+- Started resolving review warnings for PR title and docstring coverage.
+- Added documentation comments for editor chrome components and layout functions. Verified with `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
+- Attempted to update PR title locally, but `gh` is unavailable and no GitHub API token is present in the environment.
